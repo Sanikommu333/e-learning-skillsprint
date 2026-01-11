@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | SkillSprint</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="a.css">
+    <!-- Use your existing head content from index.html -->
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Skill<span>Sprint</span></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="instructors.html">Instructors</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#" class="active">Contact</a></li>
+                    <li><a href="#" class="btn-login">Get Started</a></li>
+                </ul>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 data-aos="fade-up">Get in <span class="text-gradient">Touch</span></h1>
+            <p data-aos="fade-up" data-aos-delay="200">We'd love to hear from you! Reach out for inquiries, support, or partnership opportunities.</p>
+        </div>
+    </section>
+
+    <!-- Contact Main Content -->
+    <section class="contact-main">
+        <div class="container">
+            <!-- Contact Info Cards -->
+            <div class="contact-cards">
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Our Location</h3>
+                    <p>4-123, Electronic City<br>Bangalore 560100</p>
+                    <a href="#" class="map-link">View on Map <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p>General: info@skillsprint.com<br>Support: help@skillsprint.com</p>
+                    <a href="mailto:info@skillsprint.com" class="email-link">Send Email <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>India: +91 8328229346<br>International: +1 (555) 123-4567</p>
+                    <a href="tel:+918328229346" class="call-link">Call Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Contact Form and Map -->
+            <div class="contact-content">
+                <div class="contact-form" data-aos="fade-right">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="underline"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Email Address</label>
+                            <div class="underline"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject">
+                            <label for="subject">Subject</label>
+                            <div class="underline"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="underline"></div>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <span>Send Message</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 2L11 13M22 2L15 22L11 13M11 13L2 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-map" data-aos="fade-left">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.801553940173!2d77.6704873153461!3d12.91699051960038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae13a5a5d4c10f%3A0x1d5d0a7e3b4e6c1d!2sElectronic%20City!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                            allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question">
+                        <span>How do I enroll in a course?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can enroll directly through our website by selecting your desired course and clicking "Enroll Now". For assistance, contact our support team.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We accept all major credit/debit cards, PayPal, UPI (India), and bank transfers. All transactions are securely processed.</p>
+                    </div>
+                </div>
+                
+                <!-- More FAQ items... -->
+            </div>
+            
+            <div class="support-cta" data-aos="fade-up">
+                <h3>Still have questions?</h3>
+                <p>Our support team is available 24/7 to assist you</p>
+                <a href="mailto:help@skillsprint.com" class="btn-support">Contact Support</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer>
+        <footer>
+            <footer>
+                <footer>
+                    <div class="container">
+                        <div class="footer-content">
+                            <div class="footer-section">
+                                <div class="logo">Skill <span>Sprint</span></div>
+                                <p>Empowering learners with high-quality educational resources and skill-building opportunities.</p>
+                                <div class="newsletter">
+                                    <h4>Subscribe to our newsletter</h4>
+                                    <form>
+                                        <input type="email" placeholder="Your email address">
+                                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="footer-section">
+                                <h3>Quick Links</h3>
+                                <ul>
+                                    <li><a href="#">Home</a></li>
+                                    <li><a href="#about">About</a></li>
+                                    <li><a href="#courses">Courses</a></li>
+                                    <li><a href="#contact">Contact</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="#">FAQs</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-section">
+                                <h3>Courses</h3>
+                                <ul>
+                                    <li><a href="#">Web Development</a></li>
+                                    <li><a href="#">Data Science</a></li>
+                                    <li><a href="#">Graphic Design</a></li>
+                                    <li><a href="#">Business</a></li>
+                                    <li><a href="#">Marketing</a></li>
+                                    <li><a href="#">All Courses</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-section">
+                                <h3>Legal</h3>
+                                <ul>
+                                    <li><a href="#">Terms of Service</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Cookie Policy</a></li>
+                                    <li><a href="#">Refund Policy</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <p>&copy; 2025 Vishnureddy Skill Sprint. All rights reserved.</p>
+                            <div class="footer-payments">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-paypal"></i>
+                                <i class="fab fa-cc-stripe"></i>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </footer>
+        </footer>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="contact.js"></script>
+    
+</body>
+</html>

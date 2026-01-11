@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Resources | SkillSprint</title>
+    <link rel="stylesheet" href="blog.css">
+    <link rel="stylesheet" href="a.css">
+    <!-- Use your existing head content from index.html -->
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">Skill<span>Sprint</span></a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="instruction.html">Instructors</a></li>
+                    <li><a href="#" class="active">Blog</a></li>
+                    <li><a href="course.html">Courses</a></li>
+                    <li><a href="#" class="btn-login">Get Started</a></li>
+                </ul>
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1 data-aos="fade-up">SkillSprint <span class="text-gradient">Resources</span></h1>
+            <p data-aos="fade-up" data-aos-delay="200">Expert articles, tutorials, and industry insights to boost your learning</p>
+            <div class="search-bar" data-aos="fade-up" data-aos-delay="400">
+                <input type="text" placeholder="Search articles...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured-post">
+        <div class="container">
+            <div class="featured-card" data-aos="fade-up">
+                <div class="featured-image">
+                    <img src="images/rmap.jpg" alt="Featured Post">
+                    <div class="badge">Featured</div>
+                </div>
+                <div class="featured-content">
+                    <div class="meta">
+                        <span class="category">Web Development</span>
+                        <span class="date">June 15, 2023</span>
+                    </div>
+                    <h2>The 2024 Frontend Developer Roadmap</h2>
+                    <p>Comprehensive guide to modern frontend development with React, TypeScript, and Next.js...</p>
+                    <a href="#" class="btn-read">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid with Categories -->
+    <section class="blog-main">
+        <div class="container">
+            <div class="blog-sidebar" data-aos="fade-right">
+                <h3>Categories</h3>
+                <ul class="categories">
+                    <li class="active"><a href="#">All Topics</a></li>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Data Science</a></li>
+                    <li><a href="#">Career Advice</a></li>
+                    <li><a href="#">Learning Tips</a></li>
+                </ul>
+                
+                <h3>Popular Tags</h3>
+                <div class="tags">
+                    <a href="#">JavaScript</a>
+                    <a href="#">Python</a>
+                    <a href="#">Interview Prep</a>
+                    <a href="#">React</a>
+                    <a href="#">AI</a>
+                </div>
+                
+                <div class="resource-download">
+                    <h3>Free Resources</h3>
+                    <div class="resource-card">
+                        <i class="fas fa-file-pdf"></i>
+                        <h4>2024 Developer Salary Guide</h4>
+                        <a href="#" class="btn-download">Download</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="blog-grid">
+                <!-- Article 1 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-image">
+                        <img src="images/react.jpg" alt="React Performance">
+                        <div class="category-badge">Web Development</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="meta">
+                            <span class="author">By Sarah Johnson</span>
+                            <span class="date">May 28, 2023</span>
+                        </div>
+                        <h3>10 React Performance Optimization Techniques</h3>
+                        <p>Learn how to make your React applications faster with these proven methods...</p>
+                        <div class="footer">
+                            <span class="read-time">8 min read</span>
+                            <a href="#" class="btn-read">Read More</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Article 2 -->
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="blog-image">
+                        <img src="images/pyt.jpg" alt="Python Data Analysis">
+                        <div class="category-badge">Data Science</div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="meta">
+                            <span class="author">By Michael Chen</span>
+                            <span class="date">May 15, 2023</span>
+                        </div>
+                        <h3>Python for Data Analysis: Pandas vs. Polars</h3>
+                        <p>Benchmark comparison of these two popular data analysis libraries...</p>
+                        <div class="footer">
+                            <span class="read-time">12 min read</span>
+                            <a href="#" class="btn-read">Read More</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- More articles... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="newsletter-cta" data-aos="fade-up">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Get Learning Insights Delivered Weekly</h2>
+                <p>Subscribe to our newsletter for exclusive content and resources</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer>
+        <!-- Your existing footer -->
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="a.js"></script>
+</body>
+</html>

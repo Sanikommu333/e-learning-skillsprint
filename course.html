@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Courses | SkillSprint</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="a.css">
+    <link rel="stylesheet" href="course.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+              
+                <span>SkillSprint</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="details.html" class="active">Courses</a></li>
+                    <li><a href="paths.html">Paths</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="login.html" class="btn-login">Sign In</a></li>
+                </ul>
+            </div>
+            <button class="menu-toggle" aria-label="Menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="courses-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Master New Skills Today</h1>
+                <p>Join 250,000+ learners in our premium courses</p>
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search courses...">
+                        <button id="searchBtn">Search</button>
+                    </div>
+                    <div class="quick-tags">
+                        <span>Trending:</span>
+                        <a href="#javascript">JavaScript</a>
+                        <a href="#python">Python</a>
+                        <a href="#ux">UX Design</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <i class="fas fa-book-open"></i>
+                    <div>
+                        <h3>500+</h3>
+                        <p>Courses</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <div>
+                        <h3>200+</h3>
+                        <p>Instructors</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-user-graduate"></i>
+                    <div>
+                        <h3>250K+</h3>
+                        <p>Students</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="courses-main">
+        <div class="container">
+            <div class="controls">
+                <div class="filter-group">
+                    <label for="categoryFilter"><i class="fas fa-filter"></i> Filter:</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="development">Development</option>
+                        <option value="business">Business</option>
+                        <option value="design">Design</option>
+                    </select>
+                    
+                    <select id="levelFilter">
+                        <option value="all">All Levels</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                    </select>
+                </div>
+                <div class="sort-group">
+                    <label for="sortBy"><i class="fas fa-sort"></i> Sort:</label>
+                    <select id="sortBy">
+                        <option value="popular">Most Popular</option>
+                        <option value="rating">Highest Rated</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="courses-grid" id="coursesGrid">
+                <!-- Courses load here via JS -->
+            </div>
+
+            <div class="pagination">
+                <button id="prevPage" disabled><i class="fas fa-chevron-left"></i></button>
+                <div class="page-numbers" id="pageNumbers"></div>
+                <button id="nextPage"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="container">
+            <p>Trusted by leading companies worldwide:</p>
+            <div class="badges-container">
+                <img src="images/google.jpg" alt="Google" width="120">
+                <img src="images/micro.jpg" alt="Microsoft" width="140">
+                <img src="images/ama.jpg" alt="Amazon" width="110">
+                <img src="images/ibm.jpg" alt="IBM" width="80">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+  <!-- Footer (Same as index.html) -->
+  <footer>
+    <footer>
+        <footer>
+            <footer>
+                <div class="container">
+                    <div class="footer-content">
+                        <div class="footer-section">
+                            <div class="logo">Skill <span>Sprint</span></div>
+                            <p>Empowering learners with high-quality educational resources and skill-building opportunities.</p>
+                            <div class="newsletter">
+                                <h4>Subscribe to our newsletter</h4>
+                                <form>
+                                    <input type="email" placeholder="Your email address">
+                                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#courses">Courses</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">FAQs</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Courses</h3>
+                            <ul>
+                                <li><a href="#">Web Development</a></li>
+                                <li><a href="#">Data Science</a></li>
+                                <li><a href="#">Graphic Design</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Marketing</a></li>
+                                <li><a href="#">All Courses</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Legal</h3>
+                            <ul>
+                                <li><a href="#">Terms of Service</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Cookie Policy</a></li>
+                                <li><a href="#">Refund Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Vishnureddy Skill Sprint. All rights reserved.</p>
+                        <div class="footer-payments">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fab fa-cc-stripe"></i>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </footer>
+    </footer>
+</footer>
+      
+        </div>
+    </footer>
+
+    <script src="course.js"></script>
+</body>
+</html>

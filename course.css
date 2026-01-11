@@ -1,0 +1,451 @@
+/* ===== BASE STYLES ===== */
+:root {
+    --primary: #4F46E5;
+    --primary-light: #6366F1;
+    --secondary: #10B981;
+    --dark: #111827;
+    --light: #F9FAFB;
+    --gray: #ee400f;
+    --border-radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== COURSES PAGE ===== */
+.courses-hero {
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    color: white;
+    padding: 6rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.courses-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: url('../images/pattern.svg') no-repeat;
+    background-size: contain;
+    opacity: 0.05;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search-container {
+    margin-top: 2rem;
+}
+
+.search-box {
+    display: flex;
+    background: white;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.search-box input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    outline: none;
+}
+
+.search-box button {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-box button:hover {
+    background: #0E9F76;
+}
+
+.quick-tags {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quick-tags a {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.quick-tags a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(169, 116, 116, 0.1);
+    padding: 1.2rem 1.5rem;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(5px);
+}
+
+.stat-card i {
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+/* Courses Grid */
+.courses-main {
+    padding: 4rem 0;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-group, .sort-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+select {
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid #E5E7EB;
+    background: white;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.course-card {
+    background: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.course-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.course-content {
+    padding: 1.5rem;
+}
+
+.course-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--secondary);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 3rem;
+}
+
+.pagination button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--border-radius);
+    background: white;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .courses-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .search-box button {
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .courses-hero {
+        padding: 4rem 0 2rem;
+    }
+    
+    .search-box {
+        flex-direction: column;
+        border-radius: var(--border-radius);
+    }
+    
+    .search-box button {
+        border-radius: 0 0 var(--border-radius) var(--border-radius);
+        padding: 0.8rem;
+    }
+}
+/* Trust Badges */
+.trust-badges {
+    text-align: center;
+    padding: 60px 0;
+    background: #F9FAFB;
+}
+
+.trust-badges p {
+    color: #6B7280;
+    margin-bottom: 30px;
+}
+
+.badges-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.badges-container img {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+}
+
+.badges-container img:hover {
+    opacity: 1;
+    filter: grayscale(0);
+}
+/* ===== Footer ===== */
+footer {
+    background-color: var(--darker);
+    color: var(--white);
+    padding: 80px 0 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.footer-section p {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    transition: var(--transition);
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.newsletter form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.newsletter button {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter button:hover {
+    background-color: #2980b9;
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+.footer-payments {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #bbb;
+}
+/* ===== Footer ===== */
+footer {
+    background-color: var(--darker);
+    color: var(--white);
+    padding: 80px 0 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.footer-section p {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    transition: var(--transition);
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.newsletter form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.newsletter button {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter button:hover {
+    background-color: #2980b9;
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+.footer-payments {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #bbb;
+}

@@ -1,0 +1,480 @@
+/* ===== COURSE DETAIL PAGE ===== */
+.course-header {
+    background: linear-gradient(135deg, #2c3e50, #4b6584);
+    color: white;
+    padding: 3rem 0;
+    position: relative;
+}
+
+.course-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: url('../images/pattern-dark.svg') no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+}
+
+.breadcrumb {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: white;
+}
+
+.course-title h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.course-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.course-meta i {
+    margin-right: 5px;
+    color: #f1c40f;
+}
+
+.course-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn-enroll {
+    background: #10B981;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+.btn-enroll s {
+    opacity: 0.7;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+/* Main Content Layout */
+.course-main {
+    padding: 3rem 0;
+}
+
+.course-content {
+    flex: 2;
+    margin-right: 2rem;
+}
+
+.course-sidebar {
+    flex: 1;
+}
+
+/* Video Player */
+.video-container {
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-meta {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    font-size: 0.9rem;
+}
+
+/* Tabs */
+.course-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 2rem;
+}
+
+.tab-btn {
+    padding: 0.8rem 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-btn.active {
+    color: #4F46E5;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #4F46E5;
+}
+
+.tab-content {
+    display: none;
+    padding: 1rem 0;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Learning Objectives */
+.learning-list {
+    margin: 1.5rem 0;
+}
+
+.learning-list li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.learning-list i {
+    color: #10B981;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+/* Accordion Curriculum */
+.accordion {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #eee;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    background: #f8f9fa;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.accordion-header:hover {
+    background: #f1f3f5;
+}
+
+.accordion-content {
+    padding: 0 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-item.active .accordion-content {
+    padding: 1rem 1.5rem;
+    max-height: 500px;
+}
+
+.lecture-list {
+    list-style: none;
+}
+
+.lecture-list li {
+    padding: 0.8rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #eee;
+}
+
+.lecture-list li:last-child {
+    border-bottom: none;
+}
+
+.lecture-list i {
+    color: #4F46E5;
+    margin-right: 10px;
+}
+
+/* Instructor Profile */
+.instructor-profile {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.instructor-profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4F46E5;
+}
+
+.instructor-info h3 {
+    margin-bottom: 0.5rem;
+}
+
+.instructor-info .title {
+    color: #666;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.instructor-info .stats {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.instructor-info .stats i {
+    color: #F59E0B;
+    margin-right: 5px;
+}
+
+/* Sidebar */
+.sidebar-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 1.5rem;
+    position: sticky;
+    top: 20px;
+}
+
+.price-box {
+    margin-bottom: 1.5rem;
+}
+
+.current-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.original-price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #666;
+    margin: 0 10px;
+}
+
+.discount {
+    background: #10B981;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.course-features {
+    margin-top: 1.5rem;
+}
+
+.course-features li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.course-features li:last-child {
+    border-bottom: none;
+}
+
+.course-features i {
+    color: #4F46E5;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+/* Related Courses */
+.related-courses {
+    padding: 3rem 0;
+    background: #f8f9fa;
+    border-top: 1px solid #eee;
+}
+
+.related-courses h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .course-main .container {
+        flex-direction: column;
+    }
+    
+    .course-content {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+    
+    .course-sidebar {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .course-title h1 {
+        font-size: 1.8rem;
+    }
+    
+    .course-actions {
+        flex-direction: column;
+    }
+    
+    .instructor-profile {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .instructor-info .stats {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+/* ===== Footer ===== */
+footer {
+    background-color: var(--darker);
+    color: var(--white);
+    padding: 80px 0 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary);
+}
+
+.footer-section p {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+.footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    transition: var(--transition);
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+}
+
+.newsletter form {
+    display: flex;
+    margin-top: 15px;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.newsletter button {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.newsletter button:hover {
+    background-color: #2980b9;
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+.footer-payments {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    color: #bbb;
+}

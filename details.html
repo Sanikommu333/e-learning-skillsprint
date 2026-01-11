@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Title | SkillSprint</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="a.css">
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    <!-- Navigation (Same as other pages) -->
+    <nav class="navbar">
+        <!-- Copy from courses.html -->
+    </nav>
+
+    <!-- Course Header -->
+    <header class="course-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="course.html">Courses</a> / <span>Web Development</span>
+            </div>
+            
+            <div class="course-title">
+                <h1>The Complete Web Developer Bootcamp 2023</h1>
+                <div class="course-meta">
+                    <span class="rating"><i class="fas fa-star"></i> 4.8 (12,540)</span>
+                    <span class="students"><i class="fas fa-user-graduate"></i> 54,320 enrolled</span>
+                    <span class="level"><i class="fas fa-signal"></i> Beginner</span>
+                </div>
+            </div>
+            
+            <div class="course-actions">
+                <button class="btn btn-enroll">Enroll Now - $12.99 <s>$89.99</s></button>
+                <button class="btn btn-outline"><i class="far fa-heart"></i> Wishlist</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="course-main">
+        <div class="container">
+            <!-- Left Column -->
+            <div class="course-content">
+                <!-- Video Player -->
+                <section class="video-container">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/Xdhdgl0Ju4k?si=TVnIwGR0eNPk9Ryq" title="YouTube video player" 
+                                frameborder="0" 
+                                allowfullscreen></iframe>
+                    </div>
+                    <div class="video-meta">
+                        <span><i class="fas fa-play-circle"></i> Preview this course</span>
+                        <span><i class="fas fa-clock"></i> Last updated 06/2023</span>
+                    </div>
+                </section>
+
+                <!-- Course Tabs -->
+                <div class="course-tabs">
+                    <button class="tab-btn active" data-tab="overview">Overview</button>
+                    <button class="tab-btn" data-tab="curriculum">Curriculum</button>
+                    <button class="tab-btn" data-tab="instructor">Instructor</button>
+                    <button class="tab-btn" data-tab="reviews">Reviews</button>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="tab-content active" id="overview">
+                    <h2>What You'll Learn</h2>
+                    <ul class="learning-list">
+                        <li><i class="fas fa-check"></i> Build modern websites with HTML5, CSS3 and JavaScript</li>
+                        <li><i class="fas fa-check"></i> Create responsive layouts with Flexbox and Grid</li>
+                        <!-- Add 4-5 more items -->
+                    </ul>
+
+                    <h2>Course Description</h2>
+                    <p>This complete bootcamp will take you from zero to professional web developer...</p>
+                    
+                    <h2>Requirements</h2>
+                    <ul class="requirements-list">
+                        <li><i class="fas fa-laptop"></i> Basic computer skills</li>
+                        <li><i class="fas fa-globe"></i> Internet connection</li>
+                    </ul>
+                </div>
+
+                <div class="tab-content" id="curriculum">
+                    <div class="accordion">
+                        <!-- Module 1 -->
+                        <div class="accordion-item">
+                            <button class="accordion-header">
+                                <span>Module 1: HTML Fundamentals</span>
+                                <span>4 lectures • 45 min</span>
+                            </button>
+                            <div class="accordion-content">
+                                <ul class="lecture-list">
+                                    <li>
+                                        <i class="far fa-play-circle"></i>
+                                        <span>Introduction to HTML</span>
+                                        <span>12:30</span>
+                                    </li>
+                                    <!-- Add more lectures -->
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Add 5-6 more modules -->
+                    </div>
+                </div>
+
+                <!-- Instructor Tab -->
+                <div class="tab-content" id="instructor">
+                    <div class="instructor-profile">
+                        <img src="images/heroo.jpg" alt="John Doe">
+                        <div class="instructor-info">
+                            <h3>John Doe</h3>
+                            <span class="title">Senior Web Developer at TechCorp</span>
+                            <div class="stats">
+                                <span><i class="fas fa-star"></i> 4.8 Instructor Rating</span>
+                                <span><i class="fas fa-user-graduate"></i> 210,345 Students</span>
+                                <span><i class="fas fa-play-circle"></i> 15 Courses</span>
+                            </div>
+                            <p>John has 10+ years of experience building web applications for Fortune 500 companies...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="course-sidebar">
+                <div class="sidebar-card">
+                    <div class="price-box">
+                        <span class="current-price">$12.99</span>
+                        <span class="original-price">$89.99</span>
+                        <span class="discount">85% OFF</span>
+                    </div>
+                    <button class="btn btn-primary btn-block">Enroll Now</button>
+                    <button class="btn btn-outline btn-block"><i class="far fa-heart"></i> Add to Wishlist</button>
+                    
+                    <ul class="course-features">
+                        <li><i class="fas fa-play-circle"></i> 42 hours on-demand video</li>
+                        <li><i class="fas fa-file-alt"></i> 15 articles</li>
+                        <li><i class="fas fa-download"></i> 25 downloadable resources</li>
+                        <li><i class="fas fa-infinity"></i> Full lifetime access</li>
+                        <li><i class="fas fa-mobile-alt"></i> Access on mobile and TV</li>
+                        <li><i class="fas fa-trophy"></i> Certificate of completion</li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Related Courses -->
+    <section class="related-courses">
+        <div class="container">
+            <h2>You May Also Like</h2>
+            <div class="courses-grid">
+                <!-- 3-4 related course cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as other pages) -->
+    <footer>
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <div class="logo">Skill <span>Sprint</span></div>
+                        <p>Empowering learners with high-quality educational resources and skill-building opportunities.</p>
+                        <div class="newsletter">
+                            <h4>Subscribe to our newsletter</h4>
+                            <form>
+                                <input type="email" placeholder="Your email address">
+                                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#courses">Courses</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Courses</h3>
+                        <ul>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Data Science</a></li>
+                            <li><a href="#">Graphic Design</a></li>
+                            <li><a href="#">Business</a></li>
+                            <li><a href="#">Marketing</a></li>
+                            <li><a href="#">All Courses</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Refund Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Vishnureddy Skill Sprint. All rights reserved.</p>
+                    <div class="footer-payments">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                        <i class="fab fa-cc-stripe"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </footer>
+
+    <script src="details.js"></script>
+</body>
+</html>
